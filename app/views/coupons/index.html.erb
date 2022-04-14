@@ -1,0 +1,8 @@
+<h1>List of coupons for each store</h1>
+<h3>Click on the store name to see the coupon code</h3>
+<div>
+  <% @coupons.each do |coupon| %>
+    <div><%= link_to coupon.coupon_code, coupon_path(coupon)  %> | <%= coupon.store%></div>
+  <% end %>
+</div>
+<h3><%= link_to "Add a new coupon", new_coupon_path  %></h3>
