@@ -18,6 +18,6 @@ class CouponsController < ApplicationController
                 store: params[:coupon][:store]
             }
         )
-        redirect_to coupon_path(@coupon)
+        redirect_to coupon_path(coupon)
     end
 end
